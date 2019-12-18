@@ -1,0 +1,9 @@
+image: prometheus
+network: false
+config:
+  net: host
+  runtime:
+    mkdir:
+      - "/var/lib/prometheus"
+  binds:
+  - "/var/lib/prometheus:/var/lib/prometheus"
