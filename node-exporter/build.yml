@@ -1,0 +1,25 @@
+image: node_exporter
+network: false
+config:
+  net: host
+  pid: host
+  capabilities:
+  - CAP_SYS_TIME
+  rootfsPropagation: shared
+  mounts:
+  - type: bind
+    source: "/sys/fs/cgroup"
+    destination: "/sys/fs/cgroup"
+    options:
+    - rw
+    - rbind
+    - rshared
+    - nosuid
+    - noexec
+    - nodev
+    - relatime
+  mkdir:
+    - "/var/lib"
+  binds:
+  - "/dev:/dev"
+  - "/var/lib:/var/lib"
