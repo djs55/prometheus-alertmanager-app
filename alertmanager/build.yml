@@ -1,0 +1,4 @@
+image: alertmanager
+network: false
+config:
+  net: host
