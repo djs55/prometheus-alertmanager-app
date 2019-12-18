@@ -1,0 +1,4 @@
+image: grafana
+network: false
+config:
+  net: host
